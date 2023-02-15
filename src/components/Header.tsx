@@ -5,7 +5,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsBag } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
-
+import StoreData from "../components/StoreData";
 import { motion } from "framer-motion";
 
 function Header() {
@@ -63,42 +63,8 @@ function Header() {
 	}
 	[];
 
-	function displayData(Navdata: dataProp) {
-		const title = Navdata.title;
-		const list = Navdata.data.map((data) => <li key={data}>{data}</li>);
-		const quickLinks_title = Navdata?.quickLinks_title;
-		const quickLinks = Navdata.linksData?.map((data) => (
-			<li key={data}>{data}</li>
-		));
-		const specials_title = Navdata?.specials_title;
-		const specialLinks = Navdata.specials_links?.map((data) => (
-			<li key={data}>{data}</li>
-		));
-
-		return (
-			target === "store" && (
-				<div className="my-grid">
-					<div>
-						<h3 className="text-[12px] text-[#86868b]">{title}</h3>
-						<ul className="mt-6 flex flex-col gap-4 text-[24px] text-[#E8E8ED]">
-							{list}
-						</ul>
-					</div>
-					<div className="justify-self-end">
-						<h3 className="text-[12px] text-[#86868b]">{quickLinks_title}</h3>
-						<ul className="mt-6 flex flex-col gap-1 text-[12px] text-[#E8E8ED]">
-							{quickLinks}
-						</ul>
-					</div>
-					<div className="justify-self-end">
-						<h3 className="text-[12px] text-[#86868b]">{specials_title}</h3>
-						<ul className="mt-6 flex flex-col gap-1 text-[12px] text-[#E8E8ED]">
-							{specialLinks}
-						</ul>
-					</div>
-				</div>
-			)
-		);
+	function ToggleLinks() {
+		return target === "store" && <StoreData Navdata={navData[0]} />;
 	}
 
 	return (
@@ -125,7 +91,8 @@ function Header() {
 								} w-full bg-grayish`}
 							>
 								<nav className="mx-auto  flex h-full max-w-[1030px] flex-col justify-center overflow-hidden">
-									{show && displayData(navData[0])}
+									{/* {show && target == "store" && storeData(navData[0])} */}
+									{show && ToggleLinks()}
 								</nav>
 							</ul>
 						</NavLink>
