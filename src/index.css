@@ -4,12 +4,14 @@
 @tailwind utilities;
 
 * {
-	font-family: "Poppins", sans-serif;
+	/* font-family: "Poppins", sans-serif; */
+	font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+	transition: 0.3s ease;
 }
 body {
 	scroll-behavior: smooth;
 	min-height: 100vh;
-	position: relative;
 }
 
 img {
@@ -24,5 +26,23 @@ img {
 		bottom: 0;
 		left: 0;
 		width: 100%;
+	}
+	.blur {
+		background-color: rgba(255, 255, 255, 0.103);
+		backdrop-filter: blur(10px);
+	}
+	ul a:hover .show {
+		display: block;
+		height: auto;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.my-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		justify-content: space-between;
+		max-width: 600px;
+		gap: 50px;
 	}
 }
