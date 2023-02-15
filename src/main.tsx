@@ -10,7 +10,7 @@ import Iphone from "./components/Iphone";
 import Watch from "./components/Watch";
 import Airpods from "./components/Airpods";
 import TvHome from "./components/Tv&Home";
-import Onlyonapple from "./components/Onlyonapple";
+import Entertainment from "./components/Entertainment";
 import Accessories from "./components/Accessories";
 import Support from "./components/Support";
 import Header from "./components/Header";
@@ -19,21 +19,19 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
 		<Router>
 			<Header />
-			<main>
-				<Routes>
-					<Route path="/" element={<App />}></Route>
-					<Route path="/store" element={<Store />}></Route>
-					<Route path="/mac" element={<Mac />}></Route>
-					<Route path="/ipad" element={<Ipad />}></Route>
-					<Route path="/iphone" element={<Iphone />}></Route>
-					<Route path="/watch" element={<Watch />}></Route>
-					<Route path="/airpods" element={<Airpods />}></Route>
-					<Route path="/tv&home" element={<TvHome />}></Route>
-					<Route path="/onlyonapple" element={<Onlyonapple />}></Route>
-					<Route path="/accessories" element={<Accessories />}></Route>
-					<Route path="/Support" element={<Support />}></Route>
-				</Routes>
-			</main>
+			<Routes>
+				<Route path="/" element={<App />}></Route>
+				<Route path="/store" element={<Store />}></Route>
+				<Route path="/mac" element={<Mac />}></Route>
+				<Route path="/ipad" element={<Ipad />}></Route>
+				<Route path="/iphone" element={<Iphone />}></Route>
+				<Route path="/watch" element={<Watch />}></Route>
+				<Route path="/airpods" element={<Airpods />}></Route>
+				<Route path="/tv&home" element={<TvHome />}></Route>
+				<Route path="/entertainment" element={<Entertainment />}></Route>
+				<Route path="/accessories" element={<Accessories />}></Route>
+				<Route path="/Support" element={<Support />}></Route>
+			</Routes>
 		</Router>
 	</React.StrictMode>
 );
