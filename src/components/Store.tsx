@@ -1,7 +1,11 @@
 import React from "react";
 
 function Store() {
-	return <div>Store</div>;
+	return (
+		<main>
+			<div>Store</div>;
+		</main>
+	);
 }
 
 export default Store;
