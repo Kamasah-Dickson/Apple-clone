@@ -1,7 +1,11 @@
 import React from "react";
 
 function Iphone() {
-	return <div>Iphone</div>;
+	return (
+		<main>
+			<div>Iphone</div>;
+		</main>
+	);
 }
 
 export default Iphone;
