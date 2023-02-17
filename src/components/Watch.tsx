@@ -1,7 +1,11 @@
 import React from "react";
 
 function Watch() {
-	return <div>Watch</div>;
+	return (
+		<main>
+			<div>Watch</div>;
+		</main>
+	);
 }
 
 export default Watch;

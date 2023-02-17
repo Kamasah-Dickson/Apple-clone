@@ -1,7 +1,11 @@
 import React from "react";
 
 function Tv_Home() {
-	return <div>TV and Home</div>;
+	return (
+		<main>
+			<div>TV and Home</div>;
+		</main>
+	);
 }
 
 export default Tv_Home;
