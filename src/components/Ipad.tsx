@@ -1,7 +1,11 @@
 import React from "react";
 
 function Ipad() {
-	return <div>Ipad</div>;
+	return (
+		<main>
+			<div>Ipad</div>;
+		</main>
+	);
 }
 
 export default Ipad;
