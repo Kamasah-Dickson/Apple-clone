@@ -1,7 +1,11 @@
 import React from "react";
 
-function Onlyonapple() {
-	return <div>Onlyonapple</div>;
+function Entertainment() {
+	return (
+		<main>
+			<div>Entertainment</div>;
+		</main>
+	);
 }
 
-export default Onlyonapple;
+export default Entertainment;

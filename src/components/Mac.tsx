@@ -1,7 +1,11 @@
 import React from "react";
 
 function Mac() {
-	return <div>Mac</div>;
+	return (
+		<main>
+			<div>Mac</div>
+		</main>
+	);
 }
 
 export default Mac;
