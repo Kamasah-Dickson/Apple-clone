@@ -17,7 +17,7 @@ body {
 main {
 	position: absolute;
 	bottom: 0;
-	height: calc(100% - 45px);
+	height: 100%;
 }
 
 img {
