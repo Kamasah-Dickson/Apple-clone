@@ -58,10 +58,8 @@ function Header() {
 		>
 			{size >= 768 ? (
 				<>
-					<nav
-						className={`m-auto mx-auto hidden w-full max-w-[1200px] md:block`}
-					>
-						<ul className="m-auto flex max-w-[950px] items-center px-[20px] text-[12px] font-light text-whites md:justify-between">
+					<nav className={`mx-auto hidden w-full max-w-[1200px] md:block`}>
+						<ul className="m-auto flex h-full max-w-[950px] items-center px-[20px] text-[12px] font-light text-whites md:justify-between">
 							<Link to="/" className="w-full md:w-auto">
 								<img src={logo} className="h-[20px] w-[20px]" alt="" />
 							</Link>
