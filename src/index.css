@@ -4,10 +4,8 @@
 @tailwind utilities;
 
 * {
-	/* font-family: "Poppins", sans-serif; */
 	font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial,
 		sans-serif;
-	/* transition: 0.4s ease; */
 }
 body {
 	scroll-behavior: smooth;
@@ -46,12 +44,19 @@ img {
 
 	.my-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 		justify-content: start;
 		max-width: 500px;
 		gap: 10px;
 	}
 	.my-trans {
-		transition: 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+	}
+	p .icon {
+		transition: 0.3s ease;
+		opacity: 0;
+	}
+	.my-hover .icon {
+		opacity: 1;
 	}
 }
