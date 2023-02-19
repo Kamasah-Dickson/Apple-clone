@@ -7,6 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import useResize from "./useResize";
 import GridCommerce from "./components/GridCommerce";
 import MovieSwiper from "./components/MovieSwiper";
+import Footer from "./components/Footer";
 
 export default function App() {
 	const { size } = useResize();
@@ -16,7 +17,7 @@ export default function App() {
 			<main className="home">
 				<div className="mx-auto max-w-[2500px]">
 					<div className="mt-12">
-						<p className="mx-auto max-w-[700px] py-2 text-center text-[15px] font-normal">
+						<p className="mx-auto max-w-[700px] py-2 text-center text-[12px] font-normal md:text-[15px]">
 							Get $200–$570 in credit toward an iPhone 14 when you trade in an
 							iPhone 11 or newer.
 							<a className="font-semibold text-[#2997ff] " href="#">
@@ -27,12 +28,12 @@ export default function App() {
 
 					<div className="relative h-[90vh]">
 						<img
-							src={size > 768 ? homebg : mobileHomeBg}
+							src={size >= 768 ? homebg : mobileHomeBg}
 							alt="Iphone 14"
 							className="h-full object-cover object-center"
 						/>
 						<div className="absolute top-[50px] left-0 grid w-full place-content-center text-center font-semibold">
-							<h1 className="text-[50px] tracking-[0.28] text-white md:text-[56px]">
+							<h1 className="text-[40px] tracking-[0.28] text-white md:text-[56px]">
 								iPhone 14 Pro
 							</h1>
 							<p className="text-[28px] font-normal text-white">Pro.Beyond.</p>
@@ -59,7 +60,7 @@ export default function App() {
 							alt="Iphone 14"
 							className="h-full object-cover object-center"
 						/>
-						<div className="absolute top-[55px] left-0 grid w-full place-content-center text-center font-semibold">
+						<div className="absolute top-[50px] left-0 grid w-full place-content-center text-center font-semibold">
 							<h1 className="text-[rgb(29, 29, 31] text-[50px] tracking-[0.28] md:text-[56px]">
 								iPhone 14
 							</h1>
@@ -116,6 +117,8 @@ export default function App() {
 					{/* ==========Movieswiper========== */}
 
 					<MovieSwiper />
+					{/* ====footer======= */}
+					<Footer />
 				</div>
 			</main>
 		</>
