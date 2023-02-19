@@ -1,55 +1,55 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { swiperData } from "../swiperData";
-import { motion } from "framer-motion";
+import { AiFillPlayCircle } from "react-icons/ai";
+import useResize from "../useResize";
 
 function MovieSwiper() {
+	const { size } = useResize();
 	return (
 		<div className="overflow-hidden pb-10">
 			<Swiper
-				navigation
 				pagination={{ clickable: true }}
-				modules={[Navigation, Pagination]}
-				spaceBetween={20}
+				modules={[Pagination]}
+				spaceBetween={15}
 				slidesPerView={1.5}
 				centeredSlides={true}
 				loop={true}
 			>
-				{swiperData.map((data) => {
+				{swiperData.map((data, index) => {
 					return (
 						<SwiperSlide key={data.text}>
-							<div className="relative h-full w-full">
-								{/* w-full */}
+							<div className="relative h-full w-full cursor-grab">
 								<div className="h-[550px] w-full ">
 									<img
-										className=" h-full w-full object-cover object-center"
-										src={data.img}
+										className=" h-full w-full object-cover object-top md:object-center"
+										src={size <= 750 ? data.mobile_img : data.img}
 										alt={data.text}
 									/>
 								</div>
+								{size <= 750 ? (
+									<img
+										className="absolute top-10"
+										src={data.mobile_name}
+										alt={data.text}
+									/>
+								) : null}
 								{/* =====content===== */}
-								<motion.div
-									initial={{ translateY: "70px" }}
-									animate={{ translateY: 0 }}
-									transition={{ duration: 0.4 }}
-									className="absolute bottom-14 left-14 flex items-center justify-center text-white"
-								>
-									<button className="mr-14 cursor-pointer rounded-3xl bg-white py-3 px-4 font-bold text-black transition-all hover:bg-gray-200 active:scale-x-105 active:bg-gray-100">
+								<div className="absolute bottom-12 left-0 flex flex-wrap items-center justify-center p-2 text-center text-white md:left-14">
+									<button className="mr-0 mb-3 flex cursor-pointer items-center justify-center gap-3 rounded-3xl bg-white py-3 px-5 font-bold text-black transition-all hover:bg-gray-200 active:scale-x-105 active:bg-gray-100 md:mb-0 md:mr-10">
 										Stream now
+										<AiFillPlayCircle />
 									</button>
-									<h3 className="text-lg">
+									<h3 className="max-w-[550px] text-lg">
 										<span className="mr-2 text-xl font-bold">
 											{data.genre}.
 										</span>
 										{data.text}
 									</h3>
-								</motion.div>
-								{/* =====overlay====== */}
-								<div></div>
+								</div>
 							</div>
 						</SwiperSlide>
 					);
