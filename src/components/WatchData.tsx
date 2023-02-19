@@ -1,5 +1,3 @@
-import React from "react";
-
 function WatchData({ Navdata }: any) {
 	const title = Navdata.title;
 	const list = Navdata.data.map((data: any) => <li key={data}>{data}</li>);
@@ -13,20 +11,20 @@ function WatchData({ Navdata }: any) {
 	));
 
 	return (
-		<div className="my-grid max-w-[750px]">
+		<div className="my-grid mx-[20px] mt-[150px] h-screen max-w-[750px] md:mt-8">
 			<div>
 				<h3 className="text-[12px] text-[#86868b]">{title}</h3>
-				<ul className="mt-4 flex flex-col gap-0 text-[24px] text-[#E8E8ED]">
+				<ul className="mt-4 flex flex-col gap-0 text-[20px] text-[#E8E8ED] md:text-[24px]">
 					{list}
 				</ul>
 			</div>
-			<div className="justify-self-end">
+			<div className="md:justify-self-end">
 				<h3 className="text-[12px] text-[#86868b]">{shopWatch_title}</h3>
 				<ul className="mt-4 flex flex-col gap-1 text-[12px] text-[#E8E8ED]">
 					{shopWatch_links}
 				</ul>
 			</div>
-			<div className="justify-self-end">
+			<div className="md:justify-self-end">
 				<h3 className="text-[12px] text-[#86868b]">{moreWatch_title}</h3>
 				<ul className="mt-4 flex flex-col gap-1 text-[12px] text-[#E8E8ED]">
 					{moreWatch_links}
