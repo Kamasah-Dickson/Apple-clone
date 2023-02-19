@@ -1,4 +1,3 @@
-import React from "react";
 import { gridData } from "../commerceGridData";
 import { MdKeyboardArrowRight } from "react-icons/md";
 function GridCommerce() {
