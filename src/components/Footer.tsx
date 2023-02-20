@@ -43,7 +43,7 @@ function Footer() {
 					</p>
 				</div>
 				{/* =======acordion or regular texts based on screen sizes using useResize===== */}
-				{size >= 768 ? <Footer_RegularTexts /> : <Footer_accordion />}
+				{size >= 830 ? <Footer_RegularTexts /> : <Footer_accordion />}
 			</div>
 		</div>
 	);
