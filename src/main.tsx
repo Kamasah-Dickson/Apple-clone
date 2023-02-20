@@ -14,6 +14,7 @@ import Entertainment from "./components/Entertainment";
 import Accessories from "./components/Accessories";
 import Support from "./components/Support";
 import Header from "./components/Header";
+import PageNotFound from "./components/PageNotFound";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
@@ -31,6 +32,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 				<Route path="/entertainment" element={<Entertainment />}></Route>
 				<Route path="/accessories" element={<Accessories />}></Route>
 				<Route path="/Support" element={<Support />}></Route>
+				<Route path="*" element={<PageNotFound />}></Route>
 			</Routes>
 		</Router>
 	</React.StrictMode>
