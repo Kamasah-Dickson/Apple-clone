@@ -47,7 +47,7 @@ function MobileNav({
 			{/* =========navigation========== */}
 			<div
 				className={`my-trans absolute top-0 left-0 z-10 overflow-hidden ${
-					showMobile ? "min-h-auto  h-screen md:h-[440px] " : "h-0"
+					showMobile ? "min-h-auto  h-screen" : "h-0"
 				} w-full bg-grayish`}
 			>
 				{showMobile && (
@@ -55,7 +55,7 @@ function MobileNav({
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.5, delay: 0.35 }}
-						className="mx-auto flex h-full max-w-[950px] flex-col justify-center overflow-y-scroll pt-[50px] pb-[50px]"
+						className="scroll-hidden mx-auto flex h-full max-w-[950px] flex-col justify-center overflow-y-scroll pt-[50px] pb-[50px]"
 					>
 						<AiOutlineClose
 							color="white"
