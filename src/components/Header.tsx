@@ -7,7 +7,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsBag } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
-import { motion } from "framer-motion";
+import { animate, easeIn, easeInOut, motion } from "framer-motion";
 import IpadData from "./IpadData";
 import IphoneData from "./IphoneData";
 import WatchData from "./WatchData";
@@ -19,12 +19,14 @@ import SupportData from "./SupportData";
 import { navData } from "../navData";
 import useResize from "../useResize";
 import MobileNav from "./MobileNav";
+import { useLocation } from "react-router-dom";
 
 function Header() {
 	const { size } = useResize();
 	const [show, setShow] = useState(false);
 	const [showMobile, setShowMobile] = useState(false);
 	const [target, setTarget] = useState<string | null>(null);
+	const location = useLocation();
 
 	function ToggleLinks() {
 		return target === "store" ? (
@@ -147,7 +149,7 @@ function Header() {
 								<motion.div
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
-									transition={{ duration: 0.2, delay: 0.3 }}
+									transition={{ duration: 0.3, delay: 0.2 }}
 									className={`overlay absolute top-0 left-0 -z-20 ${
 										show ? "h-screen" : "h-0"
 									} w-full blur`}
@@ -171,22 +173,25 @@ function Header() {
 							/>
 						</ul>
 					</nav>
-					<div
+					<motion.div
+						initial={{ height: "0" }}
+						animate={show ? { height: "440px" } : { height: "0" }}
+						transition={{ duration: 0.01 }}
 						className={`my-trans absolute top-0 left-0 -z-10 overflow-hidden${
-							show ? "min-h-auto  h-screen md:h-[440px] " : "h-0"
+							show ? "min-h-auto  h-screen md:h-[440px]" : "h-0"
 						} w-full bg-grayish`}
 					>
 						{show && (
 							<motion.nav
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
-								transition={{ duration: 0.5, delay: 0.35 }}
+								transition={{ duration: 0.4, delay: 0.3 }}
 								className="mx-auto flex h-full max-w-[950px] flex-col justify-center overflow-hidden pt-[50px] pb-[50px]"
 							>
 								{show && ToggleLinks()}
 							</motion.nav>
 						)}
-					</div>
+					</motion.div>
 				</>
 			) : (
 				<MobileNav
