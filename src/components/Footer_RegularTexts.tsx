@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 function Footer_RegularTexts() {
@@ -14,18 +13,36 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/store"}>
+							<Link className="hover:underline" to={"/store"}>
 								Store
 							</Link>
-							<Link to={"/mac"}>Mac</Link>
-							<Link to={"/iPad"}>iPad</Link>
-							<Link to={"/iPhone"}>iPhone</Link>
-							<Link to={"/watch"}>Watch</Link>
-							<Link to={"/airpods"}>Airpods</Link>
-							<Link to={"/tv&home"}>TV & Home</Link>
-							<Link to={"/airtag"}>AirTag</Link>
-							<Link to={"/accessories"}>Accessories</Link>
-							<Link to={"/giftcards"}>Gift Cards</Link>
+							<Link className="hover:underline" to={"/mac"}>
+								Mac
+							</Link>
+							<Link className="hover:underline" to={"/iPad"}>
+								iPad
+							</Link>
+							<Link className="hover:underline" to={"/iPhone"}>
+								iPhone
+							</Link>
+							<Link className="hover:underline" to={"/watch"}>
+								Watch
+							</Link>
+							<Link className="hover:underline" to={"/airpods"}>
+								Airpods
+							</Link>
+							<Link className="hover:underline" to={"/tv&home"}>
+								TV & Home
+							</Link>
+							<Link className="hover:underline" to={"/airtag"}>
+								AirTag
+							</Link>
+							<Link className="hover:underline" to={"/accessories"}>
+								Accessories
+							</Link>
+							<Link className="hover:underline" to={"/giftcards"}>
+								Gift Cards
+							</Link>
 						</ul>
 					</div>
 					<div>
@@ -36,12 +53,18 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/Wallet"}>
+							<Link className="hover:underline" to={"/Wallet"}>
 								Wallet
 							</Link>
-							<Link to={"/applecard"}>Apple Card</Link>
-							<Link to={"/Applepay"}>Apple Pay</Link>
-							<Link to={"/Applecash"}>Apple Cash</Link>
+							<Link className="hover:underline" to={"/applecard"}>
+								Apple Card
+							</Link>
+							<Link className="hover:underline" to={"/Applepay"}>
+								Apple Pay
+							</Link>
+							<Link className="hover:underline" to={"/Applecash"}>
+								Apple Cash
+							</Link>
 						</ul>
 					</div>
 				</div>
@@ -54,11 +77,15 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/appleID"}>
+							<Link className="hover:underline" to={"/appleID"}>
 								Manage Your Apple ID
 							</Link>
-							<Link to={"/appleaccount"}>Apple Store Account</Link>
-							<Link to={"/iCloud"}>iCloud.com</Link>
+							<Link className="hover:underline" to={"/appleaccount"}>
+								Apple Store Account
+							</Link>
+							<Link className="hover:underline" to={"/iCloud"}>
+								iCloud.com
+							</Link>
 						</ul>
 					</div>
 					<div>
@@ -69,17 +96,33 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/appleone"}>
+							<Link className="hover:underline" to={"/appleone"}>
 								Apple One
 							</Link>
-							<Link to={"/appletv"}>Apple TV+</Link>
-							<Link to={"/applemusic"}>Apple Music</Link>
-							<Link to={"/applearcade"}>Apple Arcade</Link>
-							<Link to={"/applefitness+"}>Apple Fitness+</Link>
-							<Link to={"/applenews+"}>Apple News+</Link>
-							<Link to={"/applepodcasts"}>Apple Podcasts</Link>
-							<Link to={"/applebooks"}>Apple Books</Link>
-							<Link to={"/applestore"}>Apple Store</Link>
+							<Link className="hover:underline" to={"/appletv"}>
+								Apple TV+
+							</Link>
+							<Link className="hover:underline" to={"/applemusic"}>
+								Apple Music
+							</Link>
+							<Link className="hover:underline" to={"/applearcade"}>
+								Apple Arcade
+							</Link>
+							<Link className="hover:underline" to={"/applefitness+"}>
+								Apple Fitness+
+							</Link>
+							<Link className="hover:underline" to={"/applenews+"}>
+								Apple News+
+							</Link>
+							<Link className="hover:underline" to={"/applepodcasts"}>
+								Apple Podcasts
+							</Link>
+							<Link className="hover:underline" to={"/applebooks"}>
+								Apple Books
+							</Link>
+							<Link className="hover:underline" to={"/applestore"}>
+								Apple Store
+							</Link>
 						</ul>
 					</div>
 				</div>
@@ -91,18 +134,36 @@ function Footer_RegularTexts() {
 						</button>
 					</h3>
 					<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-						<Link className="" to={"/findastore"}>
+						<Link className="hover:underline" to={"/findastore"}>
 							Find a Store
 						</Link>
-						<Link to={"/geniusbar"}>Genius Bar</Link>
-						<Link to={"/todayatapple"}>Today at Apple</Link>
-						<Link to={"/applecamp"}>Apple Camp</Link>
-						<Link to={"/applestoreapp"}>Apple Store App</Link>
-						<Link to={"/certifiedrefurbished"}>Certified Refurbished</Link>
-						<Link to={"/financing"}>Financing</Link>
-						<Link to={"/appletradein"}>Apple Trade In</Link>
-						<Link to={"/orderstatus"}>Order Status</Link>
-						<Link to={"/shoppinghelp"}>Shopping Help</Link>
+						<Link className="hover:underline" to={"/geniusbar"}>
+							Genius Bar
+						</Link>
+						<Link className="hover:underline" to={"/todayatapple"}>
+							Today at Apple
+						</Link>
+						<Link className="hover:underline" to={"/applecamp"}>
+							Apple Camp
+						</Link>
+						<Link className="hover:underline" to={"/applestoreapp"}>
+							Apple Store App
+						</Link>
+						<Link className="hover:underline" to={"/certifiedrefurbished"}>
+							Certified Refurbished
+						</Link>
+						<Link className="hover:underline" to={"/financing"}>
+							Financing
+						</Link>
+						<Link className="hover:underline" to={"/appletradein"}>
+							Apple Trade In
+						</Link>
+						<Link className="hover:underline" to={"/orderstatus"}>
+							Order Status
+						</Link>
+						<Link className="hover:underline" to={"/shoppinghelp"}>
+							Shopping Help
+						</Link>
 					</ul>
 				</div>
 				<div>
@@ -114,11 +175,15 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/findastore"}>
+							<Link className="hover:underline" to={"/findastore"}>
 								Find a Store
 							</Link>
-							<Link to={"/appleandbusiness"}>Apple and Business</Link>
-							<Link to={"/shopforbusiness"}>Shop for Business</Link>
+							<Link className="hover:underline" to={"/appleandbusiness"}>
+								Apple and Business
+							</Link>
+							<Link className="hover:underline" to={"/shopforbusiness"}>
+								Shop for Business
+							</Link>
 						</ul>
 					</div>
 					<div>
@@ -129,11 +194,15 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/appleandeducation"}>
+							<Link className="hover:underline" to={"/appleandeducation"}>
 								Apple and Education
 							</Link>
-							<Link to={"/shopk-12"}>Shop for K-12</Link>
-							<Link to={"/shopforcollege"}>Shop for College</Link>
+							<Link className="hover:underline" to={"/shopk-12"}>
+								Shop for K-12
+							</Link>
+							<Link className="hover:underline" to={"/shopforcollege"}>
+								Shop for College
+							</Link>
 						</ul>
 					</div>
 					<div>
@@ -144,11 +213,15 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/appleinhealthcare"}>
+							<Link className="hover:underline" to={"/appleinhealthcare"}>
 								Apple in Healthcare
 							</Link>
-							<Link to={"/healthonapplewatch"}>Health on Apple Watch</Link>
-							<Link to={"/healthrecordsonphone"}>Health Records on iPhone</Link>
+							<Link className="hover:underline" to={"/healthonapplewatch"}>
+								Health on Apple Watch
+							</Link>
+							<Link className="hover:underline" to={"/healthrecordsonphone"}>
+								Health Records on iPhone
+							</Link>
 						</ul>
 					</div>
 					<div>
@@ -159,10 +232,10 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/shopforgovernment"}>
+							<Link className="hover:underline" to={"/shopforgovernment"}>
 								Shop for Government
 							</Link>
-							<Link to={"/veterans and Military"}>
+							<Link className="hover:underline" to={"/veterans and Military"}>
 								Shop for Veterans and Military
 							</Link>
 						</ul>
@@ -177,17 +250,25 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/accessibility"}>
+							<Link className="hover:underline" to={"/accessibility"}>
 								Accessibility
 							</Link>
-							<Link to={"/education"}>Education</Link>
-							<Link to={"/environment"}>Environment</Link>
-							<Link to={"/inclusionandiversity"}>Inclusion and Diversity</Link>
-							<Link to={"/privacy"}>Privacy</Link>
-							<Link to={"/racialequityandjustice"}>
+							<Link className="hover:underline" to={"/education"}>
+								Education
+							</Link>
+							<Link className="hover:underline" to={"/environment"}>
+								Environment
+							</Link>
+							<Link className="hover:underline" to={"/inclusionandiversity"}>
+								Inclusion and Diversity
+							</Link>
+							<Link className="hover:underline" to={"/privacy"}>
+								Privacy
+							</Link>
+							<Link className="hover:underline" to={"/racialequityandjustice"}>
 								Racial Equity and Justice
 							</Link>
-							<Link to={"/supplierresponsibility"}>
+							<Link className="hover:underline" to={"/supplierresponsibility"}>
 								Supplier Responsibility
 							</Link>
 						</ul>
@@ -200,15 +281,27 @@ function Footer_RegularTexts() {
 							</button>
 						</h3>
 						<ul className="flex flex-col justify-center gap-2 text-[12px] text-[#6e6e73]">
-							<Link className="" to={"/newsroom"}>
+							<Link className="hover:underline" to={"/newsroom"}>
 								Newsroom
 							</Link>
-							<Link to={"/appleleadership"}>Apple Leadership</Link>
-							<Link to={"/careeropportunities"}>Career Opportunities</Link>
-							<Link to={"/investors"}>Investors</Link>
-							<Link to={"/Ethics&Compliance"}>Ethics and Compliance</Link>
-							<Link to={"/Events"}>Events</Link>
-							<Link to={"/contactapple"}>Contact Apple</Link>
+							<Link className="hover:underline" to={"/appleleadership"}>
+								Apple Leadership
+							</Link>
+							<Link className="hover:underline" to={"/careeropportunities"}>
+								Career Opportunities
+							</Link>
+							<Link className="hover:underline" to={"/investors"}>
+								Investors
+							</Link>
+							<Link className="hover:underline" to={"/Ethics&Compliance"}>
+								Ethics and Compliance
+							</Link>
+							<Link className="hover:underline" to={"/Events"}>
+								Events
+							</Link>
+							<Link className="hover:underline" to={"/contactapple"}>
+								Contact Apple
+							</Link>
 						</ul>
 					</div>
 				</div>
@@ -217,24 +310,27 @@ function Footer_RegularTexts() {
 				<div className="my-hr">
 					<p className="pb-3 text-[#6e6e73]">
 						More ways to shop:
-						<a className="px-1 text-apple-blue" href="#">
+						<a className="px-1 text-apple-blue underline" href="#">
 							Find an Apple Store
 						</a>
 						or
-						<a className="px-1 text-apple-blue" href="#">
+						<a className="px-1 text-apple-blue underline" href="#">
 							other retailer
 						</a>
 						near you. Or call 1-800-MY-APPLE.
 					</p>
 				</div>
-				<div className="flex items-center justify-between pt-3">
-					<p className="pb-5 text-[#6e6e73]">
-						Copyright © 2023 Apple Inc. All rights reserved.
-					</p>
-					<p>
-						Privacy | Policy | Terms of Use | Sales and Refunds | Legal Site Map
-					</p>
-					<p>Ghana</p>
+				<div className="flex justify-between">
+					<div className="flex flex-col items-start justify-between gap-1 pt-3">
+						<p className="text-[#6e6e73]">
+							Copyright © 2023 Apple Inc. All rights reserved.
+						</p>
+						<p>
+							Privacy | Policy | Terms of Use | Sales and Refunds | Legal Site
+							Map
+						</p>
+					</div>
+					<p className="pt-3">Ghana</p>
 				</div>
 			</footer>
 		</div>
