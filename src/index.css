@@ -6,7 +6,7 @@
 * {
 	font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial,
 		sans-serif;
-	transition: all 0.3s ease;
+	transition: all 0.2s ease;
 }
 body {
 	scroll-behavior: smooth;
@@ -47,12 +47,18 @@ img {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 		justify-content: start;
-		max-width: 500px;
+		max-width: 550px;
 		gap: 10px;
 	}
 	.my-grid2 {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		justify-content: start;
+		gap: 10px;
+	}
+	.my-grid3 {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
 		justify-content: start;
 		gap: 10px;
 	}
