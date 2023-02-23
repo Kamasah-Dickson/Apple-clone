@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/logo.svg";
+import logoBlack from "../assets/logo-dark.svg";
 import { NavLink, Link } from "react-router-dom";
 import StoreData from "../components/StoreData";
 import MacData from "./MacData";
@@ -7,7 +8,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsBag } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
-import { animate, easeIn, easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import IpadData from "./IpadData";
 import IphoneData from "./IphoneData";
 import WatchData from "./WatchData";
@@ -27,46 +28,59 @@ function Header() {
 	const [showMobile, setShowMobile] = useState(false);
 	const [target, setTarget] = useState<string | null>(null);
 	const location = useLocation();
+	const headerWhite = location.pathname === "/store";
 
 	function ToggleLinks() {
 		return target === "store" ? (
-			<StoreData Navdata={navData[0]} />
+			<StoreData Navdata={navData.store} />
 		) : target === "Mac" ? (
-			<MacData Navdata={navData[1]} />
+			<MacData Navdata={navData.mac} />
 		) : target === "ipad" ? (
-			<IpadData Navdata={navData[2]} />
+			<IpadData Navdata={navData.ipad} />
 		) : target === "iphone" ? (
-			<IphoneData Navdata={navData[3]} />
+			<IphoneData Navdata={navData.iphone} />
 		) : target === "watch" ? (
-			<WatchData Navdata={navData[4]} />
+			<WatchData Navdata={navData.appleWatch} />
 		) : target === "airpods" ? (
-			<AirpodData Navdata={navData[5]} />
+			<AirpodData Navdata={navData.airpods} />
 		) : target === "tv&home" ? (
-			<Tv_homeData Navdata={navData[6]} />
+			<Tv_homeData Navdata={navData.tv} />
 		) : target === "entertainment" ? (
-			<EntertainmentData Navdata={navData[7]} />
+			<EntertainmentData Navdata={navData.entertainment} />
 		) : target === "accessories" ? (
-			<AccessoriesData Navdata={navData[8]} />
+			<AccessoriesData Navdata={navData.accessories} />
 		) : target === "support" ? (
-			<SupportData Navdata={navData[9]} />
+			<SupportData Navdata={navData.support} />
 		) : null;
 	}
 
 	return (
 		<header
-			className={`${
-				show ? "bg-grayish" : "bg-[#323233e8]"
-			} fixed top-0 left-0 z-[99] grid h-[45px] w-full shadow-md`}
+			className={`${show ? "bg-grayish" : "bg-[#323233e8]"}  ${
+				headerWhite ? "bg-[#fbfbfd]" : "bg-[#323233e8]"
+			} fixed top-0 left-0 z-[99] grid h-[45px] w-full shadow-sm`}
 		>
 			{size >= 768 ? (
 				<>
 					<nav className={`mx-auto hidden w-full max-w-[1200px] md:block`}>
-						<ul className="m-auto flex h-full max-w-[950px] items-center px-[20px] text-[12px] font-light text-whites md:justify-between">
-							<Link to="/" className="w-full md:w-auto">
-								<img src={logo} className="h-[20px] w-[20px]" alt="" />
+						<ul
+							className={`m-auto flex h-full max-w-[950px] items-center px-[20px] text-[12px] font-light ${
+								headerWhite ? "text-grayish" : "text-whites"
+							} md:justify-between`}
+						>
+							<Link to="/" className="w-fit">
+								<img
+									src={headerWhite ? logoBlack : logo}
+									className="h-[20px] w-[20px]"
+									alt=""
+								/>
 							</Link>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark hover:text-grayish"
+										: "text-white hover:text-white"
+								}  md:flex`}
 								to="/store"
 								onMouseOver={() => (setShow(true), setTarget("store"))}
 								onClick={() => setShow(false)}
@@ -74,7 +88,11 @@ function Header() {
 								Store
 							</NavLink>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark  hover:text-grayish"
+										: "text-white hover:text-white"
+								}  md:flex`}
 								to="/mac"
 								onMouseOver={() => (setTarget("Mac"), setShow(true))}
 								onClick={() => setShow(false)}
@@ -82,7 +100,11 @@ function Header() {
 								Mac
 							</NavLink>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark  hover:text-grayish"
+										: "text-white hover:text-white "
+								} md:flex`}
 								to="/ipad"
 								onMouseOver={() => (setShow(true), setTarget("ipad"))}
 								onClick={() => setShow(false)}
@@ -90,7 +112,11 @@ function Header() {
 								iPad
 							</NavLink>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark  hover:text-grayish"
+										: "text-white hover:text-white"
+								}  md:flex`}
 								to="/iphone"
 								onMouseOver={() => (setShow(true), setTarget("iphone"))}
 								onClick={() => setShow(false)}
@@ -98,7 +124,11 @@ function Header() {
 								iPhone
 							</NavLink>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark  hover:text-grayish"
+										: "text-white hover:text-white"
+								}  md:flex`}
 								to="/watch"
 								onMouseOver={() => (setShow(true), setTarget("watch"))}
 								onClick={() => setShow(false)}
@@ -106,7 +136,11 @@ function Header() {
 								Watch
 							</NavLink>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark  hover:text-grayish"
+										: "text-white hover:text-white"
+								}  md:flex`}
 								to="/airpods"
 								onMouseOver={() => (setShow(true), setTarget("airpods"))}
 								onClick={() => setShow(false)}
@@ -114,7 +148,11 @@ function Header() {
 								Airpods
 							</NavLink>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark  hover:text-grayish"
+										: "text-white hover:text-white"
+								}  md:flex`}
 								to="/tv&home"
 								onMouseOver={() => (setShow(true), setTarget("tv&home"))}
 								onClick={() => setShow(false)}
@@ -122,7 +160,11 @@ function Header() {
 								Tv & Home
 							</NavLink>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark  hover:text-grayish"
+										: "text-white hover:text-white"
+								}  md:flex`}
 								to="/entertainment"
 								onMouseOver={() => (setShow(true), setTarget("entertainment"))}
 								onClick={() => setShow(false)}
@@ -130,7 +172,11 @@ function Header() {
 								Entertainment
 							</NavLink>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark  hover:text-grayish"
+										: "text-white hover:text-white"
+								}  md:flex`}
 								to="/accessories"
 								onMouseOver={() => (setShow(true), setTarget("accessories"))}
 								onClick={() => setShow(false)}
@@ -138,7 +184,11 @@ function Header() {
 								Accessories
 							</NavLink>
 							<NavLink
-								className="hidden hover:text-white md:flex"
+								className={`hidden ${
+									headerWhite
+										? "text-dark  hover:text-grayish"
+										: "text-white hover:text-white"
+								}  md:flex`}
 								to="/support"
 								onMouseOver={() => (setShow(true), setTarget("support"))}
 								onClick={() => setShow(false)}
@@ -159,13 +209,13 @@ function Header() {
 							<AiOutlineClose
 								size={20}
 								className="hidden cursor-pointer
-					 font-[12px] hover:text-white"
+									font-[12px] hover:text-white"
 							/>
 							<AiOutlineSearch
 								className=" cursor-pointer hover:text-white"
 								size={20}
 							/>
-							<BsBag className="mx-5 cursor-pointer text-[20px] hover:text-white md:mx-0 md:text-[17px]" />
+							<BsBag className="cursor-pointer text-[20px] hover:text-white md:text-[17px]" />
 							<HiMenuAlt4
 								className=" cursor-pointer hover:text-white md:hidden"
 								size={20}
@@ -179,7 +229,7 @@ function Header() {
 						transition={{ duration: 0.01 }}
 						className={`my-trans absolute top-0 left-0 -z-10 overflow-hidden${
 							show ? "min-h-auto  h-screen md:h-[440px]" : "h-0"
-						} w-full bg-grayish`}
+						} w-full ${headerWhite ? "bg-[#ffff]" : "bg-grayish"}`}
 					>
 						{show && (
 							<motion.nav
