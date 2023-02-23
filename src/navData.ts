@@ -1,5 +1,5 @@
-export const navData = [
-	{
+export const navData = {
+	store: {
 		title: "shop",
 		data: [
 			"Shop the latest",
@@ -20,7 +20,7 @@ export const navData = [
 			"Government",
 		],
 	},
-	{
+	mac: {
 		title: "Explore mac",
 		data: [
 			"Macbook Air",
@@ -48,7 +48,7 @@ export const navData = [
 			"Education",
 		],
 	},
-	{
+	ipad: {
 		title: "Explore iPad",
 		data: ["iPad Pro", "iPad Air", "iPad Mini", "Apple Pencil", "Keyboards"],
 		shopIpad_title: "Shop iPad",
@@ -61,7 +61,7 @@ export const navData = [
 		moreIpad_title: "More from iPad",
 		moreIpad_links: ["iPad Support", "iPadOS Ventura", "iCloud", "Education"],
 	},
-	{
+	iphone: {
 		title: "Explore iPhone",
 		data: ["iPhone 14 Pro", "iPhone 14", "iPhone 13", "iPhone 12", "iPhone SE"],
 		shopIphone_title: "Shop iPhone",
@@ -82,7 +82,7 @@ export const navData = [
 			"Siri",
 		],
 	},
-	{
+	appleWatch: {
 		title: "Explore Watch",
 		data: [
 			"Apple Watch Ultra",
@@ -103,7 +103,7 @@ export const navData = [
 		moreWatch_title: "More from Watch",
 		moreWatch_links: ["Apple Watch Support", "watchOS 9", "Apple FItness+"],
 	},
-	{
+	airpods: {
 		title: "Explore Airpods",
 		data: [
 			"AirPods 2nd generation",
@@ -116,7 +116,7 @@ export const navData = [
 		morePods_title: "More from AirPods",
 		morePods_links: ["AirPods Support", "Apple Music"],
 	},
-	{
+	tv: {
 		title: "Explore TV & Home",
 		data: ["Apple TV 4K", "HomePod", "HomePod mini"],
 		shopTV_title: "Shop Tv & Home",
@@ -139,7 +139,7 @@ export const navData = [
 			"Aiplay",
 		],
 	},
-	{
+	entertainment: {
 		title: "Explore Entertainment",
 		data: [
 			"Apple One",
@@ -155,13 +155,13 @@ export const navData = [
 		entertainment_title: "Support",
 		entertainment_links: ["Apple TV+ Support", "Apple Music Support"],
 	},
-	{
+	accessories: {
 		title: "Shop Accessories",
 		data: ["Mac", "iPad", "iPhone", "Apple Watch", "AirPods", "TV & Home"],
 		explore_accessories_title: "Explore Accessories",
 		explore_accessories_links: ["Made by Apple", "Beats by Dr.Dre", "AirTag"],
 	},
-	{
+	support: {
 		title: "Explore Support",
 		data: ["iPhone", "Mac", "iPad", "Watch", "AirPods", "Music", "TV"],
 		getHelp_title: "Get Help",
@@ -175,4 +175,4 @@ export const navData = [
 			"Accessibility",
 		],
 	},
-];
+};
