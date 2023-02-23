@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import darkLogo from "../assets/logo-dark.svg";
 import { motion } from "framer-motion";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 import { BsBag } from "react-icons/bs";
@@ -8,6 +9,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { container, item } from "../animation";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import ShowMore_Nav from "./ShowMore_Nav";
+import { useLocation } from "react-router-dom";
 
 interface mobileProp {
 	setTarget: React.Dispatch<React.SetStateAction<string | null>>;
@@ -23,25 +25,37 @@ function MobileNav({
 	ToggleLinks,
 }: mobileProp) {
 	const [extraNav, setExtraNav] = useState(false);
+	const location = useLocation();
+	const headerWhite = location.pathname === "/store";
 
 	return (
 		<div>
 			<nav className="m-auto h-full w-full max-w-[1200px]">
-				<ul className="m-auto flex h-full max-w-[1000px] items-center px-[20px] text-[12px] font-light text-whites md:justify-between">
-					<Link to="/" className="w-full md:w-auto">
-						<img src={logo} className="h-[20px] w-[20px]" alt="" />
+				<ul className="m-auto flex h-full max-w-[1000px] items-center justify-between px-[20px] text-[12px] font-light text-whites">
+					<Link to="/" className="w-fit">
+						<img
+							src={headerWhite ? darkLogo : logo}
+							className="h-[20px] w-[20px]"
+							alt=""
+						/>
 					</Link>
-
-					<AiOutlineSearch
-						className=" cursor-pointer hover:text-white"
-						size={20}
-					/>
-					<BsBag className="mx-5 cursor-pointer text-[20px] hover:text-white md:mx-0 md:text-[17px]" />
-					<HiMenuAlt4
-						className=" cursor-pointer hover:text-white md:hidden"
-						size={20}
-						onClick={() => setShowMobile((prev) => !prev)}
-					/>
+					<div className="flex items-center justify-center gap-6">
+						<AiOutlineSearch
+							className=" cursor-pointer hover:text-white"
+							size={20}
+							color={headerWhite ? "black" : "white"}
+						/>
+						<BsBag
+							color={headerWhite ? "black" : "white"}
+							className="cursor-pointer text-[20px] hover:text-white md:text-[17px]"
+						/>
+						<HiMenuAlt4
+							className=" cursor-pointer hover:text-white md:hidden"
+							size={20}
+							color={headerWhite ? "black" : "white"}
+							onClick={() => setShowMobile((prev) => !prev)}
+						/>
+					</div>
 				</ul>
 			</nav>
 			{/* =========navigation========== */}
