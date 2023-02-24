@@ -55,7 +55,7 @@ function Latest_Products({ Latest_Products }: latest_productsProps) {
 					return (
 						<SwiperSlide
 							key={data.name}
-							className="my-trans relative my-5 w-full cursor-pointer rounded-3xl shadow-2xl md:hover:scale-[1.03]"
+							className="my-trans relative my-5 w-full cursor-pointer rounded-3xl shadow-lg md:hover:scale-[1.03]"
 						>
 							<div
 								className={`absolute p-6 ${
