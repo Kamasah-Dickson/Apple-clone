@@ -1,7 +1,84 @@
-import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import useResize from "../useResize";
 
-function Latest_Products() {
-	return <div>Latest_Products</div>;
+type latestProps = {
+	name: string;
+	img: string;
+	para: string;
+	text: string;
+	white: boolean;
+}[];
+interface latest_productsProps {
+	Latest_Products: latestProps;
+}
+
+function Latest_Products({ Latest_Products }: latest_productsProps) {
+	const { size } = useResize();
+	return (
+		<div className="px-5 md:px-0">
+			<h1 className="mx-auto mt-24 mb-6 max-w-[900px] text-[28px] font-semibold leading-tight text-[#6e6e73] md:leading-none">
+				<span className="text-black">The latest.</span>Take a look at what's
+				new, right now.
+			</h1>
+			<Swiper
+				navigation
+				modules={[Navigation, A11y]}
+				spaceBetween={20}
+				breakpoints={{
+					500: {
+						slidesPerView: 1,
+					},
+					550: {
+						slidesPerView: 1.5,
+					},
+					768: {
+						slidesPerView: 2,
+					},
+					1000: {
+						slidesPerView: 2.5,
+					},
+					1200: {
+						slidesPerView: 3,
+					},
+					1400: {
+						slidesPerView: 3.5,
+					},
+				}}
+			>
+				<SwiperSlide
+					className={`important ${size <= 1400 && "hidden2"}`}
+				></SwiperSlide>
+				{Latest_Products.map((data) => {
+					return (
+						<SwiperSlide
+							key={data.name}
+							className="my-trans relative my-5 w-full cursor-pointer rounded-3xl shadow-2xl md:hover:scale-[1.03]"
+						>
+							<div
+								className={`absolute p-6 ${
+									data.white ? "text-white" : "text-black"
+								}`}
+							>
+								<p className="font-normal">{data.name}</p>
+								<h2 className="mt-3 max-w-[400px] text-[27px] font-semibold leading-tight">
+									{data.text}
+								</h2>
+								<p className="mt-3 text-lg font-medium">{data.para}</p>
+							</div>
+							<img
+								src={data.img}
+								alt={data.name}
+								className="h-[500px] rounded-3xl"
+							/>
+						</SwiperSlide>
+					);
+				})}
+			</Swiper>
+		</div>
+	);
 }
 
 export default Latest_Products;

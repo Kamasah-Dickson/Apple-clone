@@ -89,8 +89,11 @@ img {
 		display: none;
 	}
 	.important {
-		width: 120px !important;
+		width: 230px !important;
 		height: auto !important;
 		display: block;
+	}
+	.hidden2 {
+		display: none !important;
 	}
 }
