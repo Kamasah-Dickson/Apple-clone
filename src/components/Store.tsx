@@ -26,6 +26,7 @@ import ipad from "../assets/latest-products/store-card-40-ipad-202210.jpg";
 import ipadPro from "../assets/latest-products/store-card-40-ipad-pro-202210.jpg";
 import appleWatch from "../assets/latest-products/store-card-40-watch-ultra-202209.jpg";
 import PageNotFound from "./PageNotFound";
+import Help_is_here from "./Help_is_here";
 
 type latestProps = {
 	name: string;
@@ -167,35 +168,24 @@ function Store() {
 					<Store_Products products={Store_Products_Data} />
 				</div>
 				{/* ===latest-products/swiper=== */}
-				<div>
+				<div className=" bg-[#f5f5f7]">
 					<Latest_Products Latest_Products={Latest_Products_data} />
-					<h1>Store</h1>
 				</div>
-				<PageNotFound />
 				{/* ===help/care=== */}
 				<div>
-					<h1>Store</h1>
+					<Help_is_here />
 				</div>
+				<PageNotFound />
 				{/* ===apple-store-defference=== */}
-				<div>
-					<h1>Store</h1>
-				</div>
+				<div>{/* <h1>Store</h1> */}</div>
 				{/* ===essential-accessories=== */}
-				<div>
-					<h1>Store</h1>
-				</div>
+				<div>{/* <h1>Store</h1> */}</div>
 				{/* ===loud-devices=== */}
-				<div>
-					<h1>Store</h1>
-				</div>
+				<div>{/* <h1>Store</h1> */}</div>
 				{/* ===Apple-Experience=== */}
-				<div>
-					<h1>Store</h1>
-				</div>
+				<div>{/* <h1>Store</h1> */}</div>
 				{/* ===special-stores and QuickLinks=== */}
-				<div>
-					<h1>Store</h1>
-				</div>
+				<div>{/* <h1>Store</h1> */}</div>
 			</div>
 			<Footer />
 		</main>
