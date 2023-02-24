@@ -11,7 +11,9 @@ import airTagImg from "../assets/store_assets/AitTag.png";
 import appleTvImg from "../assets/store_assets/AppleTV.png";
 import homePodImg from "../assets/store_assets/HomePod.png";
 import accessoriesImg from "../assets/store_assets/Accessories.png";
-
+import giftcard from "../assets/store_assets/Giftcard.png";
+import iphone from "../assets/store_assets/iphone.png";
+import Latest_Products from "./Latest_Products";
 type productsProp = {
 	name: string;
 	img: string;
@@ -21,6 +23,10 @@ const Store_Products_Data: productsProp = [
 	{
 		name: "Mac",
 		img: macImg,
+	},
+	{
+		name: "iPhone",
+		img: iphone,
 	},
 	{
 		name: "Apple Watch",
@@ -46,19 +52,25 @@ const Store_Products_Data: productsProp = [
 		name: "Accessories",
 		img: accessoriesImg,
 	},
+	{
+		name: "Apple Gift Card",
+		img: giftcard,
+	},
 ];
 
 function Store() {
 	return (
 		<main className="bg-[#f5f5f7]">
 			<TopAdd />
-			<div className="ml-auto max-w-[1170px] bg-red-100">
+			{/* 1170 */}
+			<div className="mx-auto">
 				{/* ===intro-products=== */}
 				<div>
 					<Store_Products products={Store_Products_Data} />
 				</div>
 				{/* ===latest-products/swiper=== */}
 				<div>
+					<Latest_Products />
 					<h1>Store</h1>
 				</div>
 				{/* ===help/care=== */}
