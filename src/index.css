@@ -88,4 +88,9 @@ img {
 	.scroll-hidden::-webkit-scrollbar {
 		display: none;
 	}
+	.important {
+		width: 120px !important;
+		height: auto !important;
+		display: block;
+	}
 }
