@@ -208,17 +208,23 @@ function Header() {
 							)}
 							<AiOutlineClose
 								size={20}
+								tabIndex={0}
 								className="hidden cursor-pointer
 									font-[12px] hover:text-white"
 							/>
 							<AiOutlineSearch
 								className=" cursor-pointer hover:text-white"
 								size={20}
+								tabIndex={0}
 							/>
-							<BsBag className="cursor-pointer text-[20px] hover:text-white md:text-[17px]" />
+							<BsBag
+								className="cursor-pointer text-[20px] hover:text-white md:text-[17px]"
+								tabIndex={0}
+							/>
 							<HiMenuAlt4
 								className=" cursor-pointer hover:text-white md:hidden"
 								size={20}
+								tabIndex={0}
 								onClick={() => setShowMobile((prev) => !prev)}
 							/>
 						</ul>
