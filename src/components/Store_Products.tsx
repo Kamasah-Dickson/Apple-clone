@@ -94,7 +94,7 @@ function Store_Products({ products }: productsProps): JSX.Element {
 					className={`important ${size <= 1400 && "hidden2"}`}
 				></SwiperSlide>
 				{products.map((data) => (
-					<SwiperSlide key={data.name} className="cursor-pointer">
+					<SwiperSlide tabIndex={0} key={data.name} className="cursor-pointer">
 						<div className=" text-center">
 							<img src={data.img} alt={data.name} className="select-none" />
 							<p className="tex-black mt-3 font-normal">{data.name}</p>
