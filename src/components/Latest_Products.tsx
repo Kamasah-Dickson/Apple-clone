@@ -15,13 +15,25 @@ interface latest_productsProps {
 	Latest_Products: latestProps;
 }
 
-function Latest_Products({ Latest_Products }: latest_productsProps) {
+interface titleProp {
+	h1: string;
+	span: string;
+}
+
+interface titleType {
+	title: titleProp;
+}
+
+function Latest_Products({
+	Latest_Products,
+	title,
+}: titleType & latest_productsProps) {
 	const { size } = useResize();
 	return (
 		<div className="px-5 md:px-0">
 			<h1 className="mx-auto mt-24 mb-6 max-w-[900px] text-[28px] font-semibold leading-tight text-[#6e6e73] md:leading-none">
-				<span className="text-black">The latest.</span>Take a look at what's
-				new, right now.
+				<span className="text-black">{title.span}</span>
+				{title.h1}
 			</h1>
 			<Swiper
 				navigation
@@ -55,6 +67,7 @@ function Latest_Products({ Latest_Products }: latest_productsProps) {
 					return (
 						<SwiperSlide
 							key={data.name}
+							tabIndex={0}
 							className="my-trans relative my-5 w-full cursor-pointer rounded-3xl shadow-lg md:hover:scale-[1.03]"
 						>
 							<div
