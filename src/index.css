@@ -96,4 +96,17 @@ img {
 	.hidden2 {
 		display: none !important;
 	}
+	.gradient {
+		background-image: linear-gradient(
+			to right,
+			rgb(248, 171, 94) 0px,
+			rgb(243, 105, 97) 20%,
+			rgb(161, 118, 200) 40%,
+			rgb(117, 155, 235) 60%,
+			rgb(101, 190, 179) 80%,
+			rgb(112, 219, 150) 100%
+		);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 }
