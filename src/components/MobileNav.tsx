@@ -44,14 +44,17 @@ function MobileNav({
 							className=" cursor-pointer hover:text-white"
 							size={20}
 							color={headerWhite ? "black" : "white"}
+							tabIndex={0}
 						/>
 						<BsBag
 							color={headerWhite ? "black" : "white"}
+							tabIndex={0}
 							className="cursor-pointer text-[20px] hover:text-white md:text-[17px]"
 						/>
 						<HiMenuAlt4
 							className=" cursor-pointer hover:text-white md:hidden"
 							size={20}
+							tabIndex={0}
 							color={headerWhite ? "black" : "white"}
 							onClick={() => setShowMobile((prev) => !prev)}
 						/>
@@ -74,6 +77,7 @@ function MobileNav({
 						<AiOutlineClose
 							color="white"
 							size={20}
+							tabIndex={0}
 							onClick={() => setShowMobile(false)}
 							className="absolute top-5 right-5 cursor-pointer font-[12px] hover:text-white"
 						/>
