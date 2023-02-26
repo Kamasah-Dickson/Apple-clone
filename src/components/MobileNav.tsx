@@ -26,7 +26,7 @@ function MobileNav({
 }: mobileProp) {
 	const [extraNav, setExtraNav] = useState(false);
 	const location = useLocation();
-	const headerWhite = location.pathname === "/store";
+	const headerWhite = location.pathname === "/store" || "shop the latest";
 
 	return (
 		<div>
