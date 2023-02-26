@@ -20,8 +20,8 @@ interface productsProps {
 function Store_Products({ products }: productsProps): JSX.Element {
 	const { size } = useResize();
 	return (
-		<div className="">
-			<div className="mx-auto mb-20 flex max-w-[900px] flex-col items-start justify-between gap-10 px-5 pt-[80px] md:px-0 lg:flex-row lg:items-center">
+		<div>
+			<div className="mx-auto mb-20 flex max-w-[900px] flex-col items-start justify-between gap-10 px-5 pt-[80px] lg:flex-row lg:items-center lg:px-0">
 				<h1 className="max-w-2xl text-[30px] font-semibold leading-tight text-[#6e6e73] md:text-[48px] md:leading-none">
 					<span className="text-black"> Store.</span> The best way to buy the
 					products you love.
