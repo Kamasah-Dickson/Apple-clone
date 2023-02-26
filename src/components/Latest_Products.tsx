@@ -30,7 +30,7 @@ function Latest_Products({
 }: titleType & latest_productsProps) {
 	const { size } = useResize();
 	return (
-		<div className="px-5 md:px-0">
+		<div className="px-5 lg:px-0">
 			<h1 className="mx-auto mt-24 mb-6 max-w-[900px] text-[28px] font-semibold leading-tight text-[#6e6e73] md:leading-none">
 				<span className="text-black">{title.span}</span>
 				{title.h1}
