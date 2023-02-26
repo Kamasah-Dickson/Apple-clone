@@ -12,7 +12,7 @@ interface accessoriesProps {
 }
 function AccessoriesData({ Navdata }: accessoriesProps) {
 	const location = useLocation();
-	const headerWhite = location.pathname === "/store";
+	const headerWhite = location.pathname === "/store" || "shop the latest";
 
 	const title = Navdata.title;
 	const list = Navdata.data.map((data: any) => (
