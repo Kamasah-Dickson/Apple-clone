@@ -23,6 +23,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 			<Routes>
 				<Route path="/" element={<App />}></Route>
 				<Route path="/store" element={<Store />}></Route>
+				<Route path="/shop the latest" element={<Store />}></Route>
 				{/* <Route path="/mac" element={<Mac />}></Route>
 				<Route path="/ipad" element={<Ipad />}></Route>
 				<Route path="/iphone" element={<Iphone />}></Route>
