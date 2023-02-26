@@ -3,29 +3,7 @@ import { Navigation, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import useResize from "../useResize";
-import { useRef } from "react";
-
-type differenceProp = {
-	img: JSX.Element;
-	text: string | JSX.Element;
-	green?: boolean;
-	purple?: boolean;
-	blue?: boolean;
-	orange?: boolean;
-	name: string;
-}[];
-
-interface defferenceDataProp {
-	difference: differenceProp;
-}
-interface titleProp {
-	h1: string;
-	span: string;
-}
-
-interface titleType {
-	title: titleProp;
-}
+import { defferenceDataProp, titleType } from "../TypesData";
 
 function Store_difference({
 	difference,
@@ -33,7 +11,7 @@ function Store_difference({
 }: defferenceDataProp & titleType) {
 	const { size } = useResize();
 	return (
-		<div className="px-5 md:px-0">
+		<div className="px-5 lg:px-0">
 			<h1 className="mx-auto mt-20 mb-6 max-w-[900px] text-[28px] font-semibold leading-tight text-[#6e6e73] md:leading-none">
 				<span className="text-black">{title.span}</span>
 				{title.h1}
