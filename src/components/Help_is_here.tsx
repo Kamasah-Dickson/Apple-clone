@@ -1,10 +1,11 @@
 import specialistImg from "../assets/latest-products/store-card-50-specialist-help-202211.jpg";
 import getTOknow from "../assets/latest-products/store-card-25-apps-202108.jpg";
 import getExpert from "../assets/latest-products/store-card-25-genius-202108.jpg";
+
 function Help_is_here() {
 	return (
 		<div>
-			<h1 className="mx-auto mt-24 mb-8 max-w-[500px] px-5  text-[28px] font-semibold leading-tight text-[#6e6e73] md:max-w-[900px] md:px-0 md:leading-none">
+			<h1 className="mx-auto mt-24 mb-8 max-w-[500px] px-5  text-[28px] font-semibold leading-tight text-[#6e6e73] md:max-w-[900px] md:leading-none lg:px-0">
 				<span className="text-black">Help is here.</span>
 				Whenever and however you need it.
 			</h1>
