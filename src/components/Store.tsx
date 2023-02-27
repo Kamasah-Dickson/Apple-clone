@@ -14,12 +14,11 @@ import {
 	differenceTitle,
 	Accessories_Products_Data,
 	Accessories_Lead,
+	LoudAndClearTitle,
+	loudAndClearData,
+	LoudClearLead,
+	Accessory_heading,
 } from "./StoreProductsData";
-
-const Accessory_heading = {
-	span: "Accessories.",
-	text: "Essentials that pari perfectly with your favorite devices.",
-};
 
 function Store() {
 	return (
@@ -48,9 +47,13 @@ function Store() {
 					leading={Accessories_Lead}
 					heading={Accessory_heading}
 				/>
-				<PageNotFound />
 				{/* ===loud-devices=== */}
-				<div>{/* <h1>Store</h1> */}</div>
+				<Accessory_Products
+					product={loudAndClearData}
+					leading={LoudClearLead}
+					heading={LoudAndClearTitle}
+				/>
+				<PageNotFound />
 				{/* ===Apple-Experience=== */}
 				<div>{/* <h1>Store</h1> */}</div>
 				{/* ===special-stores and QuickLinks=== */}
