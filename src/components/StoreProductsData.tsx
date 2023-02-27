@@ -25,6 +25,13 @@ import Accessories3 from "../assets/latest-products/Accessories/MPRY3.jpg";
 import Accessories4 from "../assets/latest-products/Accessories/MQDR3.jpg";
 import Accessories5 from "../assets/latest-products/Accessories/MPPJ3.jpg";
 import Accessories6 from "../assets/latest-products/Accessories/MPPX3.jpg";
+import loudLeadingImg from "../assets/latest-products/LoudAndClear/store-card-40-applemusic-202301.jpg";
+import loudImg1 from "../assets/latest-products/LoudAndClear/homepod-select-midnight-202210.jpg";
+import loudImg2 from "../assets/latest-products/LoudAndClear/MQD83.jpg";
+import loudImg3 from "../assets/latest-products/LoudAndClear/homepod-mini-select-yellow-202110.jpg";
+import loudImg4 from "../assets/latest-products/LoudAndClear/airpods-max-select-silver-202011.jpg";
+import loudImg5 from "../assets/latest-products/LoudAndClear/MME73.jpg";
+import loudImg6 from "../assets/latest-products/LoudAndClear/MJ4X3.jpg";
 
 import {
 	productsProp,
@@ -79,6 +86,53 @@ export const Accessories_Products_Data: AccessoriesProp = [
 		new: true,
 		title: "iPhone Leather Wallet with MagSafe - Umber",
 		price: "$59.00",
+	},
+];
+
+export const LoudClearLead: leadProp = [
+	{
+		title: "Get 6 months of Apple Music free.",
+		text: "Included with your HomePod,AirPods, or select Beats product.",
+		img: loudLeadingImg,
+	},
+];
+
+export const loudAndClearData: AccessoriesProp = [
+	{
+		img: loudImg1,
+		new: true,
+		title: "HomePod - Midnight",
+		price: "$299.00",
+	},
+	{
+		img: loudImg2,
+		new: true,
+		title: "AirPods Pro (2nd generation)",
+		price: "$249.00",
+	},
+	{
+		img: loudImg3,
+		new: true,
+		title: "HomePod mini - Yellow",
+		price: "$99.00",
+	},
+	{
+		img: loudImg4,
+		new: true,
+		title: "AirPods Max - Silver",
+		price: "$549.00",
+	},
+	{
+		img: loudImg5,
+		new: true,
+		title: "AirPods (3rd generation) with Lightning Charging Case",
+		price: "$169.00",
+	},
+	{
+		img: loudImg6,
+		new: true,
+		title: "Beats Studio Buds - True Wireless Noise Cancelling...",
+		price: "$149.00",
 	},
 ];
 
@@ -358,4 +412,12 @@ export const Latest_Products_data: latestProps = [
 export const differenceTitle: titleProp = {
 	h1: "Even more reasons to shop with us.",
 	span: "The Apple Store difference.",
+};
+export const LoudAndClearTitle = {
+	text: "Unparalleled choices for rich, high-quality sound.",
+	span: "Loud and clear.",
+};
+export const Accessory_heading = {
+	span: "Accessories.",
+	text: "Essentials that pari perfectly with your favorite devices.",
 };
