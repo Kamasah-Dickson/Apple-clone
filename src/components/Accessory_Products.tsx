@@ -42,8 +42,8 @@ function Accessory_Products({ leading, product, heading }: productProps) {
 
 				{leading.map((data) => {
 					return (
-						<SwiperSlide key={data.title} className="my-5">
-							<div className="relative h-[450px] cursor-pointer overflow-hidden rounded-3xl shadow-lg">
+						<SwiperSlide key={data.title} className="my-5 cursor-pointer">
+							<div className="my-trans relative h-[450px] cursor-pointer overflow-hidden rounded-3xl shadow-md hover:scale-[1.01] hover:shadow-lg">
 								<div className=" absolute top-10 left-7">
 									<h1 className="mb-3 text-3xl font-semibold text-black">
 										{data.title}
@@ -65,9 +65,9 @@ function Accessory_Products({ leading, product, heading }: productProps) {
 					return (
 						<SwiperSlide
 							key={data.title}
-							className="my-5 rounded-3xl bg-white shadow-lg"
+							className="my-5 rounded-3xl bg-white "
 						>
-							<div className=" flex h-[450px] flex-col justify-center gap-5 overflow-hidden ">
+							<div className=" my-trans flex h-[450px] cursor-pointer flex-col justify-center gap-5 overflow-hidden rounded-3xl shadow-md hover:scale-[1.02] hover:shadow-lg">
 								<div className=" h-[250px] w-full">
 									<img
 										className=" h-full w-full object-contain"
