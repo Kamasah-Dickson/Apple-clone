@@ -28,7 +28,7 @@ function Header() {
 	const [showMobile, setShowMobile] = useState(false);
 	const [target, setTarget] = useState<string | null>(null);
 	const location = useLocation();
-	const headerWhite = location.pathname === "/store" || "shop the latest";
+	const headerWhite = location.pathname === "/store";
 
 	function ToggleLinks() {
 		return target === "store" ? (
