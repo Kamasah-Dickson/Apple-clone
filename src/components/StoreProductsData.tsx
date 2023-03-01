@@ -32,6 +32,15 @@ import loudImg3 from "../assets/latest-products/LoudAndClear/homepod-mini-select
 import loudImg4 from "../assets/latest-products/LoudAndClear/airpods-max-select-silver-202011.jpg";
 import loudImg5 from "../assets/latest-products/LoudAndClear/MME73.jpg";
 import loudImg6 from "../assets/latest-products/LoudAndClear/MJ4X3.jpg";
+import subScriptionImg from "../assets/latest-products/Experience/store-card-50-subscriptions-202108_GEO_US.jpg";
+import AppleCareImg from "../assets/latest-products/Experience/store-card-40-applecare-202301.jpg";
+import ApplePayImg from "../assets/latest-products/Experience/store-card-50-applepay-202209.jpg";
+import AppleControlImg from "../assets/latest-products/Experience/store-card-50-homekit-202301.jpg";
+import EducationImg from "../assets/latest-products/Exclusives/store-card-40-edu-202301.jpg";
+import BusinessImg from "../assets/latest-products/Exclusives/store-card-40-business-202209.jpg";
+import GovernmentImg from "../assets/latest-products/Exclusives/store-card-40-gov-202301.jpg";
+import VerteranImg from "../assets/latest-products/Exclusives/ipad-card-40-veteran-202210.jpg";
+import RefurbishedImg from "../assets/latest-products/Exclusives/store-card-40-refurb-202108.jpg";
 
 import {
 	productsProp,
@@ -40,6 +49,7 @@ import {
 	latestProps,
 	AccessoriesProp,
 	leadProp,
+	experienceProp,
 } from "../TypesData";
 
 export const Accessories_Lead: leadProp = [
@@ -409,6 +419,58 @@ export const Latest_Products_data: latestProps = [
 	},
 ];
 
+export const Apple_Experience_data: experienceProp = [
+	{
+		h1: "Six Apple services.One easy subscription.",
+		img: subScriptionImg,
+	},
+	{
+		h1: `We've got you covered.`,
+		p: "AppleCare+ now comes with unlimited repairs for accidental damage protection.",
+		img: AppleCareImg,
+	},
+	{
+		h1: "Discover all the ways to use Apple Pay.",
+		img: ApplePayImg,
+	},
+	{
+		span: "HOME",
+		h1: "See how one app can control your entire home.",
+		img: AppleControlImg,
+	},
+];
+
+export const Exclusive_data: experienceProp = [
+	{
+		span: "Education",
+		h1: "Save on Mac or iPad with Education pricing",
+		img: EducationImg,
+	},
+	{
+		span: "Business",
+		h1: `From enterprise to small business, we'll work with you`,
+		img: BusinessImg,
+		dark: true,
+	},
+
+	{
+		span: "Government",
+		h1: `Special Pricing is available for state, local, and federal agencies.`,
+		img: GovernmentImg,
+		dark: true,
+	},
+	{
+		span: "Verterans and Military",
+		h1: `Active and Veteran members may be eligible for exclusive savings.`,
+		img: VerteranImg,
+	},
+	{
+		span: "Certified Refurbished",
+		h1: `Shop refurbished Apple products backed by one-year warranty.`,
+		img: RefurbishedImg,
+	},
+];
+
 export const differenceTitle: titleProp = {
 	h1: "Even more reasons to shop with us.",
 	span: "The Apple Store difference.",
@@ -420,4 +482,13 @@ export const LoudAndClearTitle = {
 export const Accessory_heading = {
 	span: "Accessories.",
 	text: "Essentials that pari perfectly with your favorite devices.",
+};
+
+export const experience_heading = {
+	span: "The Apple experience.",
+	text: "Do even more with Apple products and services.",
+};
+export const exclusive_heading = {
+	span: "Special stores.",
+	text: "Exclusive savings for businesses,school and more.",
 };
