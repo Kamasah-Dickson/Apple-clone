@@ -14,7 +14,7 @@ interface tv_homeProps {
 
 function Tv_homeData({ Navdata }: tv_homeProps) {
 	const location = useLocation();
-	const headerWhite = location.pathname === "/store" || "shop the latest";
+	const headerWhite = location.pathname === "/store";
 
 	const title = Navdata.title;
 	const list = Navdata.data.map((data: any) => (
