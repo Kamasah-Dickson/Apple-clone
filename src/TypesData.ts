@@ -76,3 +76,11 @@ export interface productProps {
 	product: AccessoriesProp;
 	heading: headingProp;
 }
+
+export type experienceProp = {
+	span?: string;
+	h1: string;
+	p?: string;
+	img: string;
+	dark?: boolean;
+}[];
