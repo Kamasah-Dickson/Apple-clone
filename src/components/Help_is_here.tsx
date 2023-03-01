@@ -21,7 +21,7 @@ function Help_is_here() {
 							<p className="mb-3 text-sm  font-medium text-[#6e6e73]">
 								APPLE SPECIALIST
 							</p>
-							<h2 className="text-[27px] font-bold leading-tight ">
+							<h2 className="text-[20px] font-bold leading-tight md:text-[27px] ">
 								Shop one on one with a Specialist. Online or in a store.
 							</h2>
 						</div>
@@ -34,8 +34,8 @@ function Help_is_here() {
 							src={getTOknow}
 							alt="get to know your device"
 						/>
-						<div className="absolute top-9 left-7">
-							<h2 className="max-w-[350px] text-[23px] font-bold leading-tight ">
+						<div className="absolute top-7 left-7">
+							<h2 className="max-w-[350px] text-[20px] font-bold leading-tight md:text-[23px] ">
 								Get to know your new device with a free Personal Session.
 							</h2>
 						</div>
@@ -47,7 +47,7 @@ function Help_is_here() {
 							alt="get expert service"
 						/>
 						<div className="absolute top-0 left-7 flex h-full max-w-[220px] items-center">
-							<h2 className="max-w-[350px] text-[23px] font-bold leading-tight ">
+							<h2 className="max-w-[175px] text-[20px] font-bold leading-tight md:max-w-[470px] md:text-[23px] ">
 								Get expert service and support at the Genius Bar.
 							</h2>
 						</div>
