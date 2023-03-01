@@ -16,7 +16,7 @@ interface storeData {
 
 function StoreData({ Navdata }: storeData) {
 	const location = useLocation();
-	const headerWhite = location.pathname === "/store" || "shop the latest";
+	const headerWhite = location.pathname === "/store";
 
 	const title = Navdata.title;
 	const list = Navdata.data.map((data) => (
